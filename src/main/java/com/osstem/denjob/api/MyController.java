@@ -18,4 +18,12 @@ public class MyController {
 		return map;
 	}
 
+	@RequestMapping(value="/seungsik",method=RequestMethod.GET)
+	public @ResponseBody Object seungsik(@RequestParam(value="name", defaultValue="seungsik") String name) {
+		HashMap<String,String> map  = new HashMap();
+		map.put("kye",name);
+		return map;
+	}
+
+	
 }
